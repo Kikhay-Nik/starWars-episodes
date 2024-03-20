@@ -20,9 +20,9 @@ export function makePreloader() {
   copyRightLink.classList.add('copyrigth__link');
   copyRightText.classList.add('copyright__text');
 
-  starLetter.src = '../image/star.svg';
+  starLetter.src = './image/star.svg';
   starLetter.alt = 'star';
-  warsLetter.src = '../image/wars.svg';
+  warsLetter.src = './image/wars.svg';
   warsLetter.alt = 'wars';
   copyRightLink.href = 'https://cssanimation.rocks/starwars/';
   copyRightLink.textContent = 'Cssanimation.rocks';
