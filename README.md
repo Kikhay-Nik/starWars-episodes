@@ -3,8 +3,8 @@
 ---
 
 #### Скриншоты некоторых страниц:
-![Скриншот главной](starWars-episodes-main.jpg 'Скриншот главной')
-![Скриншот главной](starWars-episodes-detail.jpg 'Скриншот эпизода 1977 года')
+![Скриншот главной](./image/starWars-episodes-main.jpg 'Скриншот главной')
+![Скриншот главной](./image/starWars-episodes-detail.jpg 'Скриншот эпизода 1977 года')
 
 ---
 
