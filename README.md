@@ -1,5 +1,6 @@
 # Каталог эпизодов Star wars.
 
+Ссылка на **[проект](https://kikhay-nik.github.io/starWars-episodes/)**
 ---
 
 #### Скриншоты некоторых страниц:
