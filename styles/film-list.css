@@ -1,0 +1,28 @@
+
+.film-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 70%;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.film-item {
+  max-width: 50%;
+}
+
+.film-link {
+  display: block;
+  padding: 15px 30px;
+  border-radius: 10px;
+  background-color: var(--main-color);
+  color: #333;
+  font-size: 25px;
+  cursor: pointer;
+  box-shadow: 6px 8px 12px 8px #333;
+  text-decoration: none;
+}

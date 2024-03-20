@@ -1,0 +1,225 @@
+:root {
+  --main-color: yellow;
+}
+
+@font-face {
+  font-family: StarWars;
+  src: url(../fonts/STARWARS.woff);
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  font-family: StarWars;
+}
+
+.app {
+  position: relative;
+  min-height: 100vh;
+  background-image: url(../image/tim-schmidbauer-TE_lOmkKq04-unsplash.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+.main-title {
+  margin: 0;
+  margin-bottom: 50px;
+  font-size: 60px;
+  color: black;
+  text-align: center;
+  text-shadow: 0 0 20px var(--main-color), -0 -2px 0 var(--main-color),
+    0 -2px 0 var(--main-color), -0 2px 0 var(--main-color),
+    0 2px 0 var(--main-color), -2px -0 0 var(--main-color),
+    2px -0 0 var(--main-color), -2px 0 0 var(--main-color),
+    2px 0 0 var(--main-color), -1px -2px 0 var(--main-color),
+    1px -2px 0 var(--main-color), -1px 2px 0 var(--main-color),
+    1px 2px 0 var(--main-color), -2px -1px 0 var(--main-color),
+    2px -1px 0 var(--main-color), -2px 1px 0 var(--main-color),
+    2px 1px 0 var(--main-color), -2px -2px 0 var(--main-color),
+    2px -2px 0 var(--main-color), -2px 2px 0 var(--main-color),
+    2px 2px 0 var(--main-color), -2px -2px 0 var(--main-color),
+    2px -2px 0 var(--main-color), -2px 2px 0 var(--main-color),
+    2px 2px 0 var(--main-color);
+  animation: pulse 5s infinite;
+  z-index: 15;
+}
+
+.copyright {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 0;
+  padding-right: 10px;
+  font-size: 14px;
+  line-height: 120%;
+}
+
+.copyright__text {
+  color: grey;
+}
+.copyrigth__link {
+  color: var(--main-color);
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/* Keyframes */
+@keyframes star {
+  0% {
+    opacity: 0;
+    transform: scale(1.5) translateY(-0.75em);
+  }
+  20% {
+    opacity: 1;
+  }
+  89% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateZ(-1000em);
+  }
+}
+
+@keyframes wars {
+  0% {
+    opacity: 0;
+    transform: scale(1.5) translateY(0.5em);
+  }
+  20% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateZ(-1000em);
+  }
+}
+
+@keyframes spin-letters {
+  0%,
+  10% {
+    opacity: 0;
+    transform: rotateY(90deg);
+  }
+  30% {
+    opacity: 1;
+  }
+  70%,
+  86% {
+    transform: rotateY(0);
+    opacity: 1;
+  }
+  95%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes move-byline {
+  0% {
+    transform: translateZ(5em);
+  }
+  100% {
+    transform: translateZ(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-filter: brightness(1);
+    filter: brightness(1);
+  }
+  50% {
+    -webkit-filter: brightness(0.5);
+    filter: brightness(0.5);
+  }
+  100% {
+    -webkit-filter: brightness(1);
+    filter: brightness(1);
+  }
+}
+
+.preloader {
+  position: fixed;
+  inset: 0;
+  background-color: black;
+  background-image: url(../image/bg.webp);
+  z-index: 10;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.preloader.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.preloader__container {
+  height: 17em;
+  left: 50%;
+  position: absolute;
+  top: 53%;
+  transform: translate(-50%, -50%);
+  width: 34em;
+  perspective: 800px;
+  transform-style: preserve3d;
+}
+
+.preloader__star {
+  position: absolute;
+  top: -0.75em;
+
+  animation: star 5s ease-out infinite;
+}
+
+.preloader__wars {
+  position: absolute;
+  bottom: -0.5em;
+  animation: wars 5s ease-out infinite;
+}
+
+.preloader__text {
+  position: absolute;
+  top: 43%;
+  left: -2em;
+  right: -2em;
+  margin: 0;
+  color: #fff;
+  font-size: 2em;
+  letter-spacing: 0.4em;
+  text-align: center;
+  text-transform: uppercase;
+  animation: move-byline 5s linear infinite;
+}
+
+.preloader__text span {
+  display: inline-block;
+  animation: spin-letters 5s linear infinite;
+}
+
+/*** Media queries for adjusting to different screen sizes ***/
+
+@media only screen and (max-width: 600px) {
+  .preloader__container {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .preloader__container {
+    font-size: 7px;
+  }
+}
